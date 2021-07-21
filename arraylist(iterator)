@@ -1,0 +1,26 @@
+import java.util.*;
+public class arraylist
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int i,n,k;
+System.out.println("enter n value: ");
+n=sc.nextInt();
+ArrayList<Integer> x= new ArrayList<Integer>();
+System.out.println("enter values into array list : ");
+for(i=0;i<n;i++)
+{
+x.add(sc.nextInt());
+}
+Iterator<Integer>z= x.iterator();
+System.out.println("enter k value : ");
+k=sc.nextInt();
+while(z.hasNext())
+{
+if(z.next()<=k)
+z.remove();
+}
+System.out.println(x);
+}
+}
